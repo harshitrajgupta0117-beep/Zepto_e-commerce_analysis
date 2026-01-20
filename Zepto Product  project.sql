@@ -1,6 +1,6 @@
 
 -- 1.Retrieve the all records
-select * from Zepto;
+   select * from Zepto;
 
 -- 2.Retrieve  the total potential revenue for the store
 	select sum(discountedsellingprice * availablequantity) as Total_potential_revenue
@@ -15,13 +15,13 @@ select * from Zepto;
    		limit 1
 
  --4. Retreive Count how many unique products exist in each Category.Sort them from highest to lowest to show the store's variety.
-	select Distinct(category),count(name) as Products
+	 select Distinct(category),count(name) as Products
     	from Zepto
 		group by name,category
 		order by Products desc;
 
 --5. Retreive the top 5 products with the highest Discount Percent. Do these products belong to a specific category?
-	select distinct(name) as  Products, discountpercent as Discount 
+	 select distinct(name) as  Products, discountpercent as Discount 
 		from Zepto
 		order by Discount desc 
 		limit 5;
@@ -51,6 +51,7 @@ select * from Zepto;
 		order by price_per_gram desc;
 		
 		
+
 
 
 
